@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { Route, Routes, useLocation, useMatch, useParams } from "react-router";
-import { useEffect, useState } from "react";
 import Chart from "./Chart";
 import Price from "./Price";
 import { Link } from "react-router-dom";
@@ -70,6 +69,8 @@ const Tab = styled.span<{ activated: boolean }>`
     display: block;
   }
 `;
+
+const Back = styled.button``;
 
 interface ILocation {
   state: {
@@ -181,6 +182,9 @@ function Coin() {
             : infoData?.name}
         </Title>
       </Header>{" "}
+      <Back>
+        <Link to={`/`}>Back to Home</Link>{" "}
+      </Back>
       {loadingNow ? (
         <Loading>Loading...</Loading>
       ) : (
@@ -196,7 +200,7 @@ function Coin() {
             </OverviewItem>
             <OverviewItem>
               <span>Price:</span>
-              <span>${priceata?.quotes.USD.price.toFixed(3)}</span>
+              <span>${priceata?.quotes?.USD.price.toFixed(3)}</span>
             </OverviewItem>
           </Overview>
           <Description>{infoData?.description}</Description>
@@ -222,7 +226,7 @@ function Coin() {
 
           <Routes>
             <Route path="chart" element={<Chart coinId={coinId} />} />
-            <Route path="price" element={<Price />} />
+            <Route path="price" element={<Price coinId={coinId} />} />
           </Routes>
         </>
       )}

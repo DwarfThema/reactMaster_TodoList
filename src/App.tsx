@@ -1,5 +1,7 @@
-import { createGlobalStyle } from 'styled-components';
-import Router from './Router'
+import { useState } from "react";
+import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
+import Router from "./Router";
+import { lightTheme, theme } from "./theme";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
@@ -57,21 +59,35 @@ table {
 body{  
   font-weight: 300;
   font-family: 'Roboto Mono', monospace;
-  background-color: ${p => p.theme.bgColor};
-  color: ${p => p.theme.textColor};
+  background-color: ${(p) => p.theme.bgColor};
+  color: ${(p) => p.theme.textColor};
   line-height: 1.2;
 }
 a{
   text-decoration: none;
   color:inherit;
 }
-`
+`;
+
+const ChangeTheme = styled.button``;
 
 function App() {
+  const [themeNow, themeNext] = useState(theme);
+  const changeTheme = () => {
+    if (themeNow === theme) {
+      themeNext(lightTheme);
+    } else {
+      themeNext(theme);
+    }
+  };
+
   return (
     <>
-      <GlobalStyle />
-      <Router />
+      <ChangeTheme onClick={changeTheme}>Change Theme</ChangeTheme>
+      <ThemeProvider theme={themeNow}>
+        <GlobalStyle />
+        <Router />
+      </ThemeProvider>
     </>
   );
 }

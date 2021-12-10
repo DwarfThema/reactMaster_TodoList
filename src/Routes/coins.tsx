@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { useQuery } from "react-query";
 import { Link } from "react-router-dom";
@@ -25,7 +24,7 @@ const Title = styled.h1`
 
 const Contents = styled.ul``;
 const CoinInfo = styled.li`
-  background-color: white;
+  background-color: ${(p) => p.theme.textColor};
   color: ${(props) => props.theme.bgColor};
   border-radius: 15px;
   margin-bottom: 10px;
