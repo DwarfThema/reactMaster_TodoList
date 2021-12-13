@@ -1,6 +1,5 @@
 import { useState } from "react";
-import styled, { createGlobalStyle, ThemeProvider } from "styled-components";
-import Router from "./Router";
+import styled, { createGlobalStyle } from "styled-components";
 import { lightTheme, theme } from "./theme";
 
 const GlobalStyle = createGlobalStyle`
@@ -84,10 +83,7 @@ function App() {
   return (
     <>
       <ChangeTheme onClick={changeTheme}>Change Theme</ChangeTheme>
-      <ThemeProvider theme={themeNow}>
-        <GlobalStyle />
-        <Router />
-      </ThemeProvider>
+      <GlobalStyle />
     </>
   );
 }
