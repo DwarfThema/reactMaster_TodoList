@@ -1,6 +1,5 @@
-import { useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
-import { lightTheme, theme } from "./theme";
+import ToDoList from "./ToDoList";
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
@@ -68,22 +67,11 @@ a{
 }
 `;
 
-const ChangeTheme = styled.button``;
-
 function App() {
-  const [themeNow, themeNext] = useState(theme);
-  const changeTheme = () => {
-    if (themeNow === theme) {
-      themeNext(lightTheme);
-    } else {
-      themeNext(theme);
-    }
-  };
-
   return (
     <>
-      <ChangeTheme onClick={changeTheme}>Change Theme</ChangeTheme>
       <GlobalStyle />
+      <ToDoList />
     </>
   );
 }

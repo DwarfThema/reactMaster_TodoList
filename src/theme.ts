@@ -5,9 +5,3 @@ export const theme: DefaultTheme = {
   textColor: "#f5f6fa",
   pointColor: "#9c88ff",
 };
-
-export const lightTheme: DefaultTheme = {
-  bgColor: "#f5f6fa",
-  textColor: "#2f3640",
-  pointColor: "#9c88ff",
-};
