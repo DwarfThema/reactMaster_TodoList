@@ -28,33 +28,51 @@ interface Isubmit {
   LastName?: string;
   Email: string;
   passWord?: string;
-  address?: string;
+  passWordAgain?: string;
+  passWordcor?: string;
 }
 
 function ToDoList() {
   const {
-    register: todoResister,
+    register,
     handleSubmit,
     formState: { errors },
+    setError,
   } = useForm<Isubmit>({ defaultValues: { Email: "@naver.com" } });
-  const onValid = (data: any) => {};
+  const onValid = (data: Isubmit) => {
+    if (data.passWord !== data.passWordAgain) {
+      setError(
+        "passWordcor",
+        { message: "Passwords do not match" },
+        { shouldFocus: true }
+      );
+    }
+  };
   console.log(errors);
 
   return (
     <div>
       <Form onSubmit={handleSubmit(onValid)}>
         <input
-          {...todoResister("id", {
+          {...register("id", {
             required: "Your ID is Required",
-            minLength: { value: 20, message: "Your ID is too short" },
+            minLength: { value: 3, message: "Your ID is too short" },
+            validate: {
+              ViolentWords: (value) =>
+                value.includes("violentWords")
+                  ? "Don't type violent words"
+                  : true,
+              BadWords: (value) =>
+                value.includes("BadWords") ? "Don't type Bad words" : true,
+            },
           })}
           placeholder="ID"
         />
         <span style={{ color: "red" }}>{errors?.id?.message}</span>
-        <input {...todoResister("FirstName")} placeholder="First Name" />
-        <input {...todoResister("LastName")} placeholder="Last Name" />
+        <input {...register("FirstName")} placeholder="First Name" />
+        <input {...register("LastName")} placeholder="Last Name" />
         <input
-          {...todoResister("Email", {
+          {...register("Email", {
             required: "your Email is required",
             pattern: {
               value: /^[A-Za-z0-9._%+-]+@naver.com$/,
@@ -64,8 +82,12 @@ function ToDoList() {
           placeholder="Email"
         />
         <span style={{ color: "red" }}> {errors?.Email?.message} </span>
-        <input {...todoResister("passWord")} placeholder="passWord" />
-        <input {...todoResister("address")} placeholder="address" />
+        <input {...register("passWord")} placeholder="passWord" />
+        <input
+          {...register("passWordAgain")}
+          placeholder="passWord Once Again"
+        />
+        <span style={{ color: "red" }}> {errors?.passWordcor?.message} </span>
         <button>Add</button>
       </Form>
     </div>
