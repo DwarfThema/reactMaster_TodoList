@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/reactMaster_TodoList/static/js/main.bd1ef862.chunk.js",
-    "main.js.map": "/reactMaster_TodoList/static/js/main.bd1ef862.chunk.js.map",
-    "runtime-main.js": "/reactMaster_TodoList/static/js/runtime-main.f0defc27.js",
-    "runtime-main.js.map": "/reactMaster_TodoList/static/js/runtime-main.f0defc27.js.map",
-    "static/js/2.a9c4ce52.chunk.js": "/reactMaster_TodoList/static/js/2.a9c4ce52.chunk.js",
-    "static/js/2.a9c4ce52.chunk.js.map": "/reactMaster_TodoList/static/js/2.a9c4ce52.chunk.js.map",
-    "index.html": "/reactMaster_TodoList/index.html",
-    "static/js/2.a9c4ce52.chunk.js.LICENSE.txt": "/reactMaster_TodoList/static/js/2.a9c4ce52.chunk.js.LICENSE.txt"
+    "main.js": "/reactMaster_TodoList/index/static/js/main.bd1ef862.chunk.js",
+    "main.js.map": "/reactMaster_TodoList/index/static/js/main.bd1ef862.chunk.js.map",
+    "runtime-main.js": "/reactMaster_TodoList/index/static/js/runtime-main.9c82e1cd.js",
+    "runtime-main.js.map": "/reactMaster_TodoList/index/static/js/runtime-main.9c82e1cd.js.map",
+    "static/js/2.823efb06.chunk.js": "/reactMaster_TodoList/index/static/js/2.823efb06.chunk.js",
+    "static/js/2.823efb06.chunk.js.map": "/reactMaster_TodoList/index/static/js/2.823efb06.chunk.js.map",
+    "index.html": "/reactMaster_TodoList/index/index.html",
+    "static/js/2.823efb06.chunk.js.LICENSE.txt": "/reactMaster_TodoList/index/static/js/2.823efb06.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.f0defc27.js",
-    "static/js/2.a9c4ce52.chunk.js",
+    "static/js/runtime-main.9c82e1cd.js",
+    "static/js/2.823efb06.chunk.js",
     "static/js/main.bd1ef862.chunk.js"
   ]
 }
