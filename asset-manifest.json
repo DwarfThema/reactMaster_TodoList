@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/DwarfThema/reactMaster_TodoList/static/js/main.bd1ef862.chunk.js",
+    "main.js.map": "/DwarfThema/reactMaster_TodoList/static/js/main.bd1ef862.chunk.js.map",
+    "runtime-main.js": "/DwarfThema/reactMaster_TodoList/static/js/runtime-main.f3d03f16.js",
+    "runtime-main.js.map": "/DwarfThema/reactMaster_TodoList/static/js/runtime-main.f3d03f16.js.map",
+    "static/js/2.f6b96bcf.chunk.js": "/DwarfThema/reactMaster_TodoList/static/js/2.f6b96bcf.chunk.js",
+    "static/js/2.f6b96bcf.chunk.js.map": "/DwarfThema/reactMaster_TodoList/static/js/2.f6b96bcf.chunk.js.map",
+    "index.html": "/DwarfThema/reactMaster_TodoList/index.html",
+    "static/js/2.f6b96bcf.chunk.js.LICENSE.txt": "/DwarfThema/reactMaster_TodoList/static/js/2.f6b96bcf.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f3d03f16.js",
+    "static/js/2.f6b96bcf.chunk.js",
+    "static/js/main.bd1ef862.chunk.js"
+  ]
+}
